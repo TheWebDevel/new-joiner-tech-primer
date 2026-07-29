@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import HourDeck from './components/HourDeck'
+import MobileNotice from './components/MobileNotice'
 import PageLoadSlide from './slides/PageLoadSlide'
 import LiveBrowserSlide from './slides/LiveBrowserSlide'
 import BuildingBlocksSlide from './slides/BuildingBlocksSlide'
@@ -185,14 +186,17 @@ const recapSlides = [{ Component: RecapQuizSlide, steps: 0, section: 'Recap · F
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/hour/1" element={<HourDeck slides={hour1Slides} />} />
-      <Route path="/hour/2" element={<HourDeck slides={hour2Slides} />} />
-      <Route path="/hour/3" element={<HourDeck slides={hour3Slides} />} />
-      <Route path="/hour/4" element={<HourDeck slides={hour4Slides} />} />
-      <Route path="/recap" element={<HourDeck slides={recapSlides} />} />
-    </Routes>
+    <>
+      <MobileNotice />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/hour/1" element={<HourDeck slides={hour1Slides} />} />
+        <Route path="/hour/2" element={<HourDeck slides={hour2Slides} />} />
+        <Route path="/hour/3" element={<HourDeck slides={hour3Slides} />} />
+        <Route path="/hour/4" element={<HourDeck slides={hour4Slides} />} />
+        <Route path="/recap" element={<HourDeck slides={recapSlides} />} />
+      </Routes>
+    </>
   )
 }
 
