@@ -3,7 +3,7 @@ function MobileNotice() {
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-presidio-navy via-presidio-dark to-presidio-blue px-8 text-center lg:hidden">
       <img
         src={`${import.meta.env.BASE_URL}favicon.svg`}
-        alt="Presidio"
+        alt="Logo"
         className="h-16 w-16 rounded-full shadow-lg"
       />
       <div>

@@ -42,7 +42,7 @@ function HomePage() {
           variants={item}
           className="mb-6 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-presidio-cyan backdrop-blur"
         >
-          Presidio · BA Training
+          BA Training
         </motion.div>
 
         <motion.h1
