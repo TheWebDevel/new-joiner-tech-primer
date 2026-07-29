@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lato:wght@300;400;700;900&display=swap");
+
+@theme {
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Lato", system-ui, sans-serif;
+
+  /* Presidio brand palette (BRAND GUIDELINES v2.0) */
+  --color-presidio-blue: #0081bc;
+  --color-presidio-dark: #004575;
+  --color-presidio-navy: #001b30;
+  --color-presidio-cyan: #00acf0;
+  --color-presidio-orange: #ff9d16;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes grid-pan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-pan 18s linear infinite;
+}
